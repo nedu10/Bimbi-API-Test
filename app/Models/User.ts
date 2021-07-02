@@ -1,6 +1,13 @@
 import { DateTime } from "luxon";
-import { BaseModel, beforeSave, column } from "@ioc:Adonis/Lucid/Orm";
+import {
+  BaseModel,
+  beforeSave,
+  column,
+  HasOne,
+  hasOne,
+} from "@ioc:Adonis/Lucid/Orm";
 import Hash from "@ioc:Adonis/Core/Hash";
+import Product from "./Product";
 
 export default class User extends BaseModel {
   @column({ isPrimary: true })
@@ -45,4 +52,10 @@ export default class User extends BaseModel {
       user.password = await Hash.make(user.password);
     }
   }
+
+  @hasOne(() => Product, {
+    localKey: "id",
+    foreignKey: "user_id",
+  })
+  public product: HasOne<typeof Product>;
 }

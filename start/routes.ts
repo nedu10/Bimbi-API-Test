@@ -22,6 +22,7 @@ import Route from "@ioc:Adonis/Core/Route";
 
 import "./app_routes/authentication.route";
 import "./app_routes/category.route";
+import "./app_routes/product.route";
 
 Route.get("/", async () => {
   return { hello: "Welcome to Bimbi API" };

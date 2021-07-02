@@ -47,4 +47,6 @@ Route.group(() => {
     "/delete-product-sub-category/:sub_category_id",
     "Category/ProductsubcategoriesController.delete_product_sub_category"
   );
-}).prefix("/api/v1/category");
+})
+  .middleware("auth")
+  .prefix("/api/v1/category");

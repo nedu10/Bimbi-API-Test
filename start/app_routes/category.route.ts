@@ -27,4 +27,24 @@ Route.group(() => {
     "/delete-product-category/:category_id",
     "Category/ProductcategoriesController.delete_product_category"
   );
+  Route.post(
+    "/create-product-sub-category",
+    "Category/ProductsubcategoriesController.create_product_sub_category"
+  );
+  Route.get(
+    "/product-sub-category",
+    "Category/ProductsubcategoriesController.get_product_sub_category"
+  );
+  Route.get(
+    "/product-sub-category/:sub_category_id",
+    "Category/ProductsubcategoriesController.get_single_product_sub_category"
+  );
+  Route.put(
+    "/update-product-sub-category/:sub_category_id",
+    "Category/ProductsubcategoriesController.update_product_sub_category"
+  );
+  Route.delete(
+    "/delete-product-sub-category/:sub_category_id",
+    "Category/ProductsubcategoriesController.delete_product_sub_category"
+  );
 }).prefix("/api/v1/category");

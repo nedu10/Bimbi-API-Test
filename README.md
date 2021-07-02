@@ -11,3 +11,5 @@
 [Postman Documentation](https://documenter.getpostman.com/view/5258371/Tzm2HxPm)
 
 [Github Link](https://github.com/nedu10/Bimbi-API-Test)
+
+[Phpmyadmin DB](https://phpmyadmin-c010.cloudclusters.net/index.php)
